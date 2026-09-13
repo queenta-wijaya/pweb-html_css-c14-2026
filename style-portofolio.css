@@ -1,0 +1,199 @@
+:root {
+    --color-black: #000000;
+    --color-card-bg: #111111;
+    --color-white: #ffffff;
+    --color-light-gray: #c0c0c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: var(--color-white);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+.portfolio-hero {
+    text-align: center;
+    padding: 5rem 8% 3rem;
+}
+
+.badge {
+    border: 1px solid var(--color-white);
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-title {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-subtitle {
+    color: var(--color-light-gray);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.section-title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.album-section,
+.single-section {
+    padding: 3rem 8%;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.album-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.album-card:hover {
+    border-color: var(--color-white);
+    transform: translateY(-6px);
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.album-info {
+    padding: 1.5rem;
+}
+
+.album-info h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.album-year {
+    display: block;
+    color: var(--color-light-gray);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.album-info p {
+    color: var(--color-light-gray);
+    font-size: 1rem;
+}
+
+.single-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.single-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1.2rem;
+}
+
+.single-name {
+    letter-spacing: 1px;
+}
+
+.single-year {
+    color: var(--color-light-gray);
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: var(--color-black);
+    color: var(--color-light-gray);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-title {
+        font-size: 2.5rem;
+    }
+}
