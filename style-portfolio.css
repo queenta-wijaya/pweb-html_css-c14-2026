@@ -172,6 +172,16 @@ body {
     font-style: italic;
 }
 
+.spotify-section {
+    padding: 3rem 8% 5rem;
+    text-align: center;
+}
+
+.spotify-embed {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 footer {
     text-align: center;
     padding: 2.5rem;
